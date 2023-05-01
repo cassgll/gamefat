@@ -13,3 +13,5 @@ Pretendo atualizá-lo em breve com:
 - Seção de Compras
 - Usabilidade
 - Temas Light e Dark
+
+Para visualizar o projeto [Clique aqui](https://project-gamelog.netlify.app/)
