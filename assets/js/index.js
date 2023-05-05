@@ -38,7 +38,6 @@ window.addEventListener(
 		allElements.forEach((e) => {
 			if (windowTop >= e.offsetTop) {
 				e.classList.add("animating");
-				console.log("1111");
 			} else {
 				e.classList.remove("animating");
 			}
