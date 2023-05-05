@@ -30,6 +30,26 @@ function animeScroll() {
 	});
 }
 
-window.addEventListener("scroll", () => {
-	animeScroll();
-});
+window.addEventListener(
+	"scroll",
+	debounce(function animeScroll() {
+		const windowTop =
+			window.pageYOffset + (window.innerHeight * 3) / 4;
+		allElements.forEach((e) => {
+			if (windowTop >= e.offsetTop) {
+				e.classList.add("animating");
+				console.log("1111");
+			} else {
+				e.classList.remove("animating");
+			}
+		});
+	}, 500)
+);
+
+function debounce(func, wait) {
+	let timer = null;
+	return function () {
+		clearTimeout(timer);
+		timer = setTimeout(func, wait);
+	};
+}
