@@ -295,7 +295,7 @@ img {
 /* Animation */
 [wm-animation] {
 	opacity: 0;
-	transition: 0.5s;
+	transition: 0.25s;
 }
 [wm-animation="top"] {
 	transform: translate3d(0px, -50px, 0px);
