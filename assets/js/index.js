@@ -20,9 +20,9 @@ const allElements = document.querySelectorAll(
 
 function animeScroll() {
 	const windowTop =
-		window.pageYOffset + (window.innerHeight * 3) / 4;
+		window.pageYOffset + window.innerHeight * 0.85;
 	allElements.forEach((e) => {
-		if (windowTop >= e.offsetTop) {
+		if (windowTop > e.offsetTop) {
 			e.classList.add("animating");
 		} else {
 			e.classList.remove("animating");
@@ -32,7 +32,7 @@ function animeScroll() {
 
 window.addEventListener(
 	"scroll",
-	debounce(animeScroll, 150)
+	debounce(animeScroll, 75)
 );
 
 function debounce(func, wait) {
