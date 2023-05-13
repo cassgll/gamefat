@@ -14,4 +14,4 @@ Pretendo atualizá-lo em breve com:
 - Usabilidade
 - Temas Light e Dark
 
-Para visualizar o projeto [Clique aqui](https://project-gamelog.netlify.app/)
+Para visualizar o projeto [Clique aqui](https://gamefat.netlify.app/)
