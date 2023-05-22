@@ -1,9 +1,12 @@
+/* ==== SETTINGS CSS ==== */
+
 :root {
 	--primary-color: #06090f;
 	--second-color: #323285;
 	--white-color: #eaeaff;
 	--gray-color: #acacac;
 	--black-color: #17171a;
+	--link-color: #3737ff;
 	--primary-alternative-color: #090d16;
 	--paragraph-line-height: 180%;
 	--subtitle-line-height: 170%;
@@ -38,19 +41,33 @@ body {
 a {
 	text-decoration: none;
 	font-weight: 700;
+	color: var(--white-color);
 }
 li {
 	list-style: none;
+}
+img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
 }
 main section {
 	padding: 56px 0;
 	max-width: 1024px;
 	margin: 0 auto;
 }
+
+/* ==== HEADER CSS ==== */
+
 .header {
 	height: 16vh;
 	width: 100%;
 }
+
+/* ==== NAV CSS ==== */
+
 .nav-logo {
 	font-size: var(--paragraph-font-size);
 	color: var(--white-color);
@@ -77,9 +94,18 @@ nav > i {
 	font-size: var(--paragraph-font-size);
 	font-weight: 400;
 }
+
+/* ==== HOME CSS ==== */
+
 .home {
+	animation: topAnimation 1s ease-in-out;
 	margin-top: 4.8rem;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
 }
 .home-title {
 	font-size: var(--title-font-size);
@@ -88,17 +114,39 @@ nav > i {
 	padding: 0 12.8rem;
 }
 .home-subtitle {
-	margin-top: 1.6rem;
 	font-size: var(--title-font-size);
 	color: var(--white-color);
 	font-weight: 700;
 }
 .home-paragraph {
-	margin-top: 3.2rem;
 	font-size: var(--paragraph-font-size);
 	color: var(--gray-color);
 	line-height: var(--paragraph-line-height);
 }
+
+.home-button {
+	width: 100%;
+	max-width: 208px;
+	margin: 0;
+}
+
+.home-button button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 32px;
+	font-size: var(--small-font-size);
+	border: none;
+	background: var(--button-color);
+	color: var(--white-color);
+	padding: 12px 24px;
+	border-radius: 0.4rem;
+	cursor: pointer;
+}
+
+/* ==== GAMES CSS ==== */
+
 .games-container {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
@@ -112,6 +160,7 @@ nav > i {
 	color: var(--gray-color);
 }
 .games-button button {
+	font-size: var(--small-font-size);
 	border: none;
 	background: var(--button-color);
 	color: var(--white-color);
@@ -154,13 +203,9 @@ nav > i {
 		#06090f 100%
 	);
 }
-img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	border-radius: 0.5rem;
-	padding: 0.5rem;
-}
+
+/* ==== NEWS CSS ==== */
+
 .news {
 	display: flex;
 	flex-direction: column;
@@ -214,17 +259,14 @@ img {
 	line-height: 140%;
 	font-weight: 400;
 }
+
+/* ==== COUPONS CSS ==== */
+
 .coupons-subtitle {
 	line-height: var(--subtitle-line-height);
 	margin-bottom: 4rem;
 	font-size: var(--subtitle-font-size);
 	color: var(--white-color);
-}
-.coupons-content-01 h3 {
-	line-height: var(--subtitle-line-height);
-	font-size: var(--normal-font-size);
-	color: var(--gray-color);
-	font-weight: 500;
 }
 .coupons-content-01 p {
 	margin-top: 1.6rem;
@@ -233,7 +275,7 @@ img {
 	line-height: var(--paragraph-line-height);
 }
 .coupons-content-01 p a {
-	color: #3737ff;
+	color: var(--link-color);
 }
 .coupons-content-02 {
 	margin-top: 2.4rem;
@@ -259,6 +301,9 @@ img {
 .coupons-item:hover {
 	background: #0c121f;
 }
+
+/* ==== FOOTER CSS ==== */
+
 .footer {
 	width: 100%;
 	height: 100px;
@@ -281,7 +326,7 @@ img {
 	font-weight: 400;
 }
 .footer p a {
-	color: #3737ff;
+	color: var(--link-color);
 }
 .footer-list {
 	display: flex;
@@ -292,7 +337,21 @@ img {
 	font-size: var(--paragraph-font-size);
 }
 
-/* Animation */
+/* ==== ANIMATION CSS ==== */
+
+/* ==== loading animation ==== */
+@keyframes topAnimation {
+	from {
+		opacity: 0;
+		transform: translateY(-200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ==== scroll animation ==== */
 [wm-animation] {
 	opacity: 0;
 	transition: 0.3s;
@@ -305,7 +364,7 @@ img {
 	transform: translate3d(0, 0, 0);
 }
 
-/* Media Queries */
+/* ==== MEDIA QUERIES CSS ==== */
 
 @media screen and (max-width: 768px) {
 	:root {
