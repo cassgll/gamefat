@@ -452,6 +452,13 @@ nav > i {
 		flex-direction: column;
 		gap: 1.6rem;
 	}
+	.home-button {
+		max-width: 176px;
+	}
+
+	.home-button button {
+		font-size: 12px;
+	}
 	.news-subtitle {
 		font-size: var(--subtitle-font-size);
 	}
@@ -462,6 +469,9 @@ nav > i {
 	}
 	.games-subtitle {
 		font-size: var(--subtitle-font-size);
+	}
+	.games-button button {
+		font-size: 12px;
 	}
 	.coupons-subtitle {
 		font-size: var(--subtitle-font-size);
