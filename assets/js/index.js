@@ -30,6 +30,8 @@ function animeScroll() {
 	});
 }
 
+animeScroll();
+
 window.addEventListener(
 	"scroll",
 	debounce(animeScroll, 75)
