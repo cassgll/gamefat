@@ -382,6 +382,11 @@ img {
 	}
 	.home-title {
 		padding: 0 16px;
+		font-size: 32px;
+	}
+	.home-subtitle {
+		padding: 0 16px;
+		font-size: 32px;
 	}
 	.news-contents {
 		display: flex;
