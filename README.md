@@ -8,7 +8,6 @@ Esse projeto tem como objetivo implementar meus aprendizados em HTML,CSS e um po
 
 Pretendo atualizá-lo em breve com:
 
-- Animações
 - Seção de Login
 - Seção de Compras
 - Usabilidade
