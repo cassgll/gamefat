@@ -62,8 +62,13 @@ main section {
 /* ==== HEADER CSS ==== */
 
 .header {
+	position: sticky;
+	z-index: 1;
+	top: 0;
 	height: 16vh;
 	width: 100%;
+	border-bottom: 1px solid var(--border-color);
+	background-color: var(--primary-color);
 }
 
 /* ==== NAV CSS ==== */
