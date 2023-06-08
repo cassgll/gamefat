@@ -98,7 +98,6 @@ nav > i {
 /* ==== HOME CSS ==== */
 
 .home {
-	animation: topAnimation 1s ease-in-out;
 	margin-top: 4.8rem;
 	text-align: center;
 	display: flex;
@@ -108,23 +107,27 @@ nav > i {
 	gap: 1.6rem;
 }
 .home-title {
+	animation: topAnimation 1s ease-in-out;
 	font-size: var(--title-font-size);
 	color: var(--white-color);
 	font-weight: 700;
 	padding: 0 12.8rem;
 }
 .home-subtitle {
+	animation: topAnimation 1s ease-in-out;
 	font-size: var(--title-font-size);
 	color: var(--white-color);
 	font-weight: 700;
 }
 .home-paragraph {
+	animation: leftAnimation 1s ease-in-out;
 	font-size: var(--paragraph-font-size);
 	color: var(--gray-color);
 	line-height: var(--paragraph-line-height);
 }
 
 .home-button {
+	animation: bottomAnimation 1s ease-in-out;
 	width: 100%;
 	max-width: 208px;
 	margin: 0;
@@ -143,6 +146,13 @@ nav > i {
 	padding: 12px 24px;
 	border-radius: 0.4rem;
 	cursor: pointer;
+}
+.home-button button:hover {
+	background: linear-gradient(
+		223.75deg,
+		#0029af 4.8%,
+		#000a42 95.02%
+	);
 }
 
 /* ==== GAMES CSS ==== */
@@ -264,7 +274,7 @@ nav > i {
 
 .coupons-subtitle {
 	line-height: var(--subtitle-line-height);
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	font-size: var(--subtitle-font-size);
 	color: var(--white-color);
 }
@@ -351,13 +361,55 @@ nav > i {
 	}
 }
 
+@keyframes leftAnimation {
+	from {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes rightAnimation {
+	from {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes bottomAnimation {
+	from {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 /* ==== scroll animation ==== */
 [wm-animation] {
 	opacity: 0;
-	transition: 0.3s;
+	transition: 1s ease-in-out;
 }
 [wm-animation="top"] {
 	transform: translate3d(0px, -50px, 0px);
+}
+[wm-animation="left"] {
+	transform: translate3d(-50px, 0px, 0px);
+}
+[wm-animation="right"] {
+	transform: translate3d(50px, 0px, 0px);
+}
+[wm-animation="bottom"] {
+	transform: translate3d(0px, 50px, 0px);
 }
 [wm-animation].animating {
 	opacity: 1;
@@ -487,9 +539,6 @@ nav > i {
 	}
 	.coupons-item {
 		font-size: var(--paragraph-font-size);
-	}
-	.footer div {
-		padding: 0 4rem;
 	}
 	.footer div p {
 		text-align: start;
