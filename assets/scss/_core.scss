@@ -1,0 +1,80 @@
+/*==== Colors ====*/
+$primary-color: #06090f;
+$primary-alternative-color: #090d16;
+$second-color: #323285;
+$second-alternative-color: #23235c;
+
+$white-color: #eaeaff;
+$gray-color: #acacac;
+$black-color: #17171a;
+
+$link-color: #3737ff;
+
+/*==== Line Heights ====*/
+$paragraph-line-height: 140%;
+$subtitle-line-height: 130%;
+$title-line-height: 140%;
+
+$border-color: rgba(35, 51, 85, 0.5);
+$button-color: linear-gradient(
+	223.75deg,
+	#1c51ff 4.8%,
+	#001068 95.02%
+);
+
+/*==== Texts ====*/
+$font-family: "Ubuntu", sans-serif;
+
+$title-font-size: 4.8rem;
+$subtitle-font-size: 3.2rem;
+$paragraph-font-size: 2rem;
+
+/*==== Texts Mobile ====*/
+$title-font-size-mobile: 4rem;
+$subtitle-font-size-mobile: 2.4rem;
+$paragraph-font-size-mobile: 1.6rem;
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+:target {
+	scroll-margin-top: 4.8rem;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: $font-family;
+}
+
+body {
+	background: $primary-color;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white-color);
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+main section {
+	padding: 5.6rem 0;
+	max-width: 1024px;
+	margin: 0 auto;
+}
