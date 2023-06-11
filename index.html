@@ -30,7 +30,7 @@
 			crossorigin
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -41,7 +41,7 @@
 	<body>
 		<header class="header">
 			<nav class="nav" id="nav" wm-animation>
-				<a href="#" class="nav-logo">GAMEFAT</a>
+				<a href="#" class="nav-logo">GF</a>
 				<i class="bx bx-menu-alt-right" id="button"></i>
 				<ul class="nav-list">
 					<li>
@@ -61,10 +61,9 @@
 		</header>
 
 		<main>
-			<section class="home">
-				<h1 class="home-title">GAMEFAT!</h1>
-				<h2 class="home-subtitle">O seu blog de jogos.</h2>
-				<p class="home-paragraph">
+			<section class="home" id="home">
+				<h1>Blog de jogos da Gamefat</h1>
+				<p>
 					Aqui você encontra as melhores ofertas para compra
 					de jogos e skins. Aproveite as promoções
 					exclusivas e garanta mais diversão em seus jogos
@@ -78,11 +77,23 @@
 				></a>
 			</section>
 
-			<section class="games" id="games" wm-animation="top">
-				<h2 class="games-subtitle">Jogos</h2>
+			<section
+				class="games"
+				id="games"
+				wm-animation="bottom"
+			>
+				<h2>Principais jogos da plataforma</h2>
+				<p>
+					A nossa plataforma garante a qualidade dos jogos
+					oferecidos através de verificação realizada por
+					lojas parceiras e o provedores de jogos. Isso
+					garante que os jogos são originais, seguros e
+					livres de problemas técnicos. Além disso, temos
+					ofertas para itens de jogos adquiridos.
+				</p>
 				<div>
 					<div class="games-container">
-						<div class="games-content">
+						<div class="games-content 1">
 							<a href="">
 								<div class="gradient"></div>
 								<img
@@ -91,7 +102,7 @@
 								/>
 							</a>
 						</div>
-						<div class="games-content">
+						<div class="games-content 2">
 							<a href="">
 								<div class="gradient"></div>
 								<img
@@ -100,7 +111,7 @@
 								/>
 							</a>
 						</div>
-						<div class="games-content">
+						<div class="games-content 3">
 							<a href="">
 								<div class="gradient"></div>
 								<img
@@ -109,7 +120,7 @@
 								/>
 							</a>
 						</div>
-						<div class="games-content">
+						<div class="games-content 4">
 							<a href="">
 								<div class="gradient"></div>
 								<img
@@ -118,7 +129,7 @@
 								/>
 							</a>
 						</div>
-						<div class="games-content">
+						<div class="games-content 5">
 							<a href="">
 								<div class="gradient"></div>
 								<img
@@ -127,7 +138,7 @@
 								/>
 							</a>
 						</div>
-						<div class="games-content">
+						<div class="games-content 6">
 							<a href="">
 								<div class="gradient"></div>
 								<img
@@ -137,30 +148,22 @@
 							</a>
 						</div>
 					</div>
-					<p class="games-paragraph">
-						A nossa plataforma garante a qualidade dos jogos
-						oferecidos através de verificação realizada por
-						lojas parceiras e o provedores de jogos. Isso
-						garante que os jogos são originais, seguros e
-						livres de problemas técnicos. Além disso, temos
-						ofertas para itens de jogos adquiridos.
-					</p>
 					<a href="" class="games-button"
 						><button>Encontre seu jogo</button></a
 					>
 				</div>
 			</section>
 
-			<section class="news" id="news" wm-animation="top">
-				<h2 class="news-subtitle">Notícias</h2>
+			<section class="news" id="news" wm-animation="bottom">
+				<h2>Notícias dos melhores games</h2>
 				<div class="news-contents">
 					<div class="news-container">
 						<a href="">
 							<article class="article">
 								<div class="gradient"></div>
 								<img
-									src="assets/img/capa-valorant.jpg"
-									alt="Valorant"
+									src="assets/img/harbor.png"
+									alt="Fundo de tela - Trailer de Lançamento do Harbor"
 								/>
 								<div class="news-info">
 									<span>Valorant</span>
@@ -178,13 +181,15 @@
 							<article class="article">
 								<div class="gradient"></div>
 								<img
-									src="assets/img/capa-valorant.jpg"
+									src="assets/img/csgo.jpg"
 									alt="CSGO 2.0"
+									loading="lazy"
 								/>
 								<div class="news-info">
 									<span>CSGO 2.0</span>
 									<h2>
-										Valve anuncia nova atualização do CSGO.
+										Valve anuncia nova atualização do CSGO -
+										CSGO 2.0
 									</h2>
 								</div>
 							</article>
@@ -196,8 +201,9 @@
 							<article class="article">
 								<div class="gradient"></div>
 								<img
-									src="assets/img/capa-valorant.jpg"
+									src="assets/img/fortnite.jpg"
 									alt="Fortnite"
+									loading="lazy"
 								/>
 								<div class="news-info">
 									<span>Fortnite</span>
@@ -215,8 +221,9 @@
 							<article class="article">
 								<div class="gradient"></div>
 								<img
-									src="assets/img/capa-valorant.jpg"
+									src="assets/img/godOfWar.jpg"
 									alt="God of War"
+									loading="lazy"
 								/>
 								<div class="news-info">
 									<span>God of War</span>
@@ -229,23 +236,37 @@
 						</a>
 					</div>
 				</div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing
+					elit. Cum fuga, quod dicta nihil illo, illum eius
+					velit aliquam aliquid officiis, dolorem delectus
+					molestiae voluptatum deleniti voluptate est magni
+					ad! Officiis. Lorem ipsum dolor sit amet,
+					consectetur adipisicing elit. Dolores voluptas
+					culpa consequuntur nihil odit! Magni tempore,
+					assumenda tenetur quas, aliquid saepe doloremque
+					veritatis facilis voluptas consequuntur velit at,
+					modi neque.
+				</p>
 			</section>
 
 			<section
 				class="coupons"
 				id="coupons"
-				wm-animation="top"
+				wm-animation="bottom"
 			>
-				<h2 class="coupons-subtitle">
-					Como funciona os cupons da plataforma?
-				</h2>
+				<h2>Como funciona os cupons da plataforma?</h2>
 				<div class="coupons-content-01">
 					<p>
 						Para adquirir os cupons de descontos, é preciso
 						ser cadastrado nas
 						<a href="">lojas parceiras</a> e vincular o
 						código promocional que estará disponível no seu
-						e-mail cadastrado na plataforma da Gamefat.
+						e-mail cadastrado na plataforma da Gamefat. Caso
+						aconteça algum problema em relação a compra de
+						jogos, código promocional, vinculação da conta
+						com a plataforma do jogo ou parecido, entre em
+						contato com o suporte.
 					</p>
 				</div>
 				<div class="coupons-content-02">
@@ -253,6 +274,42 @@
 						<span class="coupons-item">
 							<i class="bx bxs-coupon"></i>20% de desconto
 							no Valorant Pass - 2023</span
+						></a
+					>
+					<a href="">
+						<span class="coupons-item">
+							<i class="bx bxs-coupon"></i>Jogos do
+							XBOX</span
+						></a
+					>
+					<a href="">
+						<span class="coupons-item">
+							<i class="bx bxs-coupon"></i>Jogos do
+							Playstation 5</span
+						></a
+					>
+					<a href="">
+						<span class="coupons-item">
+							<i class="bx bxs-coupon"></i>1.200vp com 12%
+							de desconto</span
+						></a
+					>
+					<a href="">
+						<span class="coupons-item">
+							<i class="bx bxs-coupon"></i>CSGO 2
+							cupons</span
+						></a
+					>
+					<a href="">
+						<span class="coupons-item">
+							<i class="bx bxs-coupon"></i>Cupons
+							Gratuitos</span
+						></a
+					>
+					<a href="">
+						<span class="coupons-item">
+							<i class="bx bxs-coupon"></i>Jogos
+							Gratuitos</span
 						></a
 					>
 					<a href="">
@@ -275,19 +332,13 @@
 			<div>
 				<p>
 					Copyright © <a href="">cassiogabriel.com</a>.All
-					rights reserved. 2023
+					rights reserved. 2023 - Portfólio
 				</p>
 				<ul class="footer-list">
 					<li>
-						<a href=""
-							><i class="bx bxl-instagram-alt"></i
+						<a href="#"
+							><i class="bx bx-up-arrow-alt"></i
 						></a>
-					</li>
-					<li>
-						<a href=""><i class="bx bxl-twitter"></i></a>
-					</li>
-					<li>
-						<a href=""><i class="bx bxl-github"></i></a>
 					</li>
 				</ul>
 			</div>
