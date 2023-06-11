@@ -1,0 +1,247 @@
+/*==== Header ====*/
+.header {
+	position: sticky;
+	z-index: 1000;
+	top: 0;
+	height: 12vh;
+	width: 100%;
+	border-bottom: 1px solid $border-color;
+	background-color: $primary-color;
+	.nav {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 12.8rem;
+		height: 100%;
+
+		.nav-list {
+			display: flex;
+			gap: 3.2rem;
+			li {
+				a {
+					color: $white-color;
+					font-size: 18px;
+					font-weight: 400;
+				}
+			}
+		}
+		i {
+			display: none;
+		}
+		.nav-logo {
+			font-size: $paragraph-font-size;
+			color: $white-color;
+			letter-spacing: 0.2rem;
+		}
+	}
+}
+
+/*==== Home Page ====*/
+.home {
+	max-width: 100%;
+	margin: 0;
+	height: calc(90vh - 12vh);
+	background: linear-gradient(
+		45deg,
+		$primary-color,
+		rgb(15, 15, 41),
+		$primary-color
+	);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		@include title;
+		animation: topAnimation 1s ease-in-out;
+		padding: 0 12.8rem;
+	}
+	p {
+		max-width: 1024px;
+		margin-top: 1.6rem;
+		animation: leftAnimation 1s ease-in-out;
+		font-size: $paragraph-font-size;
+		color: $gray-color;
+		line-height: $paragraph-line-height;
+		padding: 0 12.8rem;
+	}
+	.home-button {
+		animation: bottomAnimation 1s ease-in-out;
+		margin-top: 2.4rem;
+
+		button {
+			display: flex;
+			gap: 0.8rem;
+			align-items: center;
+			@include button;
+		}
+	}
+}
+
+/*==== Games Page ====*/
+.games {
+	h2 {
+		@include subtitle;
+	}
+	p {
+		margin-top: 1.6rem;
+		@include paragraph;
+	}
+	.games-container {
+		margin-top: 3.2rem;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 1.6rem;
+
+		.games-content {
+			border: 1px solid $border-color;
+			border-radius: 0.5rem;
+			position: relative;
+		}
+	}
+	.games-button {
+		button {
+			margin-top: 3.2rem;
+			@include button;
+		}
+	}
+}
+
+.news {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	h2 {
+		@include subtitle;
+	}
+	.news-contents {
+		display: flex;
+		flex-direction: row;
+		gap: 1.6rem;
+		.news-container {
+			height: 100%;
+			width: 100%;
+			a {
+				.article {
+					position: relative;
+					height: 400px;
+					.gradient {
+						padding: 0;
+					}
+					img {
+						padding: 0;
+					}
+					.news-info {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						padding: 25px;
+						span {
+							background: $button-color;
+							color: #fefbfb;
+							padding: 6px 16px;
+							border-radius: 4px;
+							line-height: $paragraph-line-height;
+							font-size: 1.2rem;
+							font-weight: 500;
+						}
+						h2 {
+							font-size: 18px;
+							line-height: $subtitle-line-height;
+							color: #fefbfb;
+							margin-top: 1.5rem;
+							line-height: 140%;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+	}
+	p {
+		@include paragraph;
+		margin-top: 3.2rem;
+	}
+}
+
+/*==== Coupons Page ====*/
+.coupons {
+	h2 {
+		@include subtitle;
+	}
+	.coupons-content-01 {
+		p {
+			@include paragraph;
+			margin-top: 1.6rem;
+			a {
+				color: $link-color;
+			}
+		}
+	}
+	.coupons-content-02 {
+		margin-top: 3.2rem;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.8rem;
+		.coupons-item {
+			cursor: pointer;
+			border-radius: 0.4rem;
+			font-size: 18px;
+			display: flex;
+			gap: 0.8rem;
+			align-items: center;
+			color: $white-color;
+			padding: 8px 16px;
+			border: 1px solid $border-color;
+			a {
+				color: $gray-color;
+			}
+			&:hover {
+				background: #0c121f;
+			}
+		}
+	}
+}
+
+/*==== Footer Page ====*/
+.footer {
+	width: 100%;
+	background-color: $primary-alternative-color;
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100px;
+		margin: 0 12.8rem;
+		p {
+			line-height: $paragraph-line-height;
+			font-size: 1.6rem;
+			color: $gray-color;
+			text-align: center;
+			font-weight: 400;
+			a {
+				color: $link-color;
+			}
+		}
+		.footer-list {
+			display: flex;
+			gap: 1.6rem;
+			li {
+				a {
+					color: $gray-color;
+					font-size: $paragraph-font-size;
+					background-color: $second-color;
+					padding: 0.8rem;
+					border-radius: 0.4rem;
+					i {
+						font-size: 20px;
+						animation: return 1s ease-in infinite alternate;
+					}
+				}
+			}
+		}
+	}
+}
