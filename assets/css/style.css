@@ -1,564 +1,625 @@
-/* ==== SETTINGS CSS ==== */
-
-:root {
-	--primary-color: #06090f;
-	--second-color: #323285;
-	--white-color: #eaeaff;
-	--gray-color: #acacac;
-	--black-color: #17171a;
-	--link-color: #3737ff;
-	--primary-alternative-color: #090d16;
-	--paragraph-line-height: 180%;
-	--subtitle-line-height: 170%;
-	--title-line-height: 160%;
-	--border-color: rgba(35, 51, 85, 0.5);
-	--button-color: linear-gradient(
-		223.75deg,
-		#1c51ff 4.8%,
-		#001068 95.02%
-	);
-	--font-family: Inter, sans-serif;
-	--title-font-size: 5.6rem;
-	--subtitle-font-size: 3.2rem;
-	--normal-font-size: 2.4rem;
-	--paragraph-font-size: 2rem;
-	--small-font-size: 1.6rem;
-}
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	font-family: var(--font-family);
-}
-html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
-}
-body {
-	background: #06090f;
-	overflow-x: hidden;
-}
-a {
-	text-decoration: none;
-	font-weight: 700;
-	color: var(--white-color);
-}
-li {
-	list-style: none;
-}
-img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	border-radius: 0.5rem;
-	padding: 0.5rem;
-}
-main section {
-	padding: 56px 0;
-	max-width: 1024px;
-	margin: 0 auto;
-}
-
-/* ==== HEADER CSS ==== */
-
-.header {
-	position: sticky;
-	z-index: 1;
-	top: 0;
-	height: 16vh;
-	width: 100%;
-	border-bottom: 1px solid var(--border-color);
-	background-color: var(--primary-color);
-}
-
-/* ==== NAV CSS ==== */
-
-.nav-logo {
-	font-size: var(--paragraph-font-size);
-	color: var(--white-color);
-	letter-spacing: 0.2rem;
-}
-nav > i {
-	display: none;
-}
-.nav-list {
-	display: flex;
-	gap: 3.2rem;
-}
-.nav {
-	align-items: center;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	max-width: 1024px;
-	height: 100%;
-	margin: 0 auto;
-}
-.nav-list li a {
-	color: var(--white-color);
-	font-size: var(--paragraph-font-size);
-	font-weight: 400;
-}
-
-/* ==== HOME CSS ==== */
-
-.home {
-	margin-top: 4.8rem;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 1.6rem;
-}
-.home-title {
-	animation: topAnimation 1s ease-in-out;
-	font-size: var(--title-font-size);
-	color: var(--white-color);
-	font-weight: 700;
-	padding: 0 12.8rem;
-}
-.home-subtitle {
-	animation: topAnimation 1s ease-in-out;
-	font-size: var(--title-font-size);
-	color: var(--white-color);
-	font-weight: 700;
-}
-.home-paragraph {
-	animation: leftAnimation 1s ease-in-out;
-	font-size: var(--paragraph-font-size);
-	color: var(--gray-color);
-	line-height: var(--paragraph-line-height);
-}
-
-.home-button {
-	animation: bottomAnimation 1s ease-in-out;
-	width: 100%;
-	max-width: 208px;
-	margin: 0;
-}
-
-.home-button button {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	margin-top: 32px;
-	font-size: var(--small-font-size);
-	border: none;
-	background: var(--button-color);
-	color: var(--white-color);
-	padding: 12px 24px;
-	border-radius: 0.4rem;
-	cursor: pointer;
-}
-.home-button button:hover {
-	background: linear-gradient(
-		223.75deg,
-		#0029af 4.8%,
-		#000a42 95.02%
-	);
-}
-
-/* ==== GAMES CSS ==== */
-
-.games-container {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: 1.6rem;
-}
-.games-paragraph {
-	margin-top: 2.4rem;
-	margin-bottom: 2.4rem;
-	font-size: var(--paragraph-font-size);
-	line-height: var(--paragraph-line-height);
-	color: var(--gray-color);
-}
-.games-button button {
-	font-size: var(--small-font-size);
-	border: none;
-	background: var(--button-color);
-	color: var(--white-color);
-	padding: 12px 24px;
-	border-radius: 0.4rem;
-	cursor: pointer;
-}
-.games-button button:hover {
-	background: linear-gradient(
-		223.75deg,
-		#0029af 4.8%,
-		#000a42 95.02%
-	);
-}
-.games-content {
-	border: 1px solid var(--border-color);
-	border-radius: 0.5rem;
-	position: relative;
-}
-.games-subtitle {
-	line-height: var(--subtitle-line-height);
-	margin-bottom: 4rem;
-	font-size: var(--subtitle-font-size);
-	color: var(--white-color);
-}
 .gradient {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(
-		rgba(6, 9, 15, 0.4) 60%,
-		#06090f 100%
-	);
-	padding: 0.5rem;
-	border-radius: 0.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(6, 9, 15, 0.4) 60%, #06090f 100%);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 .gradient:hover {
-	background: linear-gradient(
-		rgba(6, 9, 15, 0.582) 60%,
-		#06090f 100%
-	);
+  background: linear-gradient(rgba(6, 9, 15, 0.582) 60%, #06090f 100%);
 }
 
-/* ==== NEWS CSS ==== */
+/* ==== Mixins Texts ==== */
+/* ==== Mixins Texts ==== */
+/* ==== Loading Animation CSS ==== */
+@keyframes topAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes leftAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rightAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes bottomAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ==== Scroll Animation JS ==== */
+[wm-animation] {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+[wm-animation=top] {
+  transform: translate3d(0px, -50px, 0px);
+}
+
+[wm-animation=left] {
+  transform: translate3d(-50px, 0px, 0px);
+}
+
+[wm-animation=right] {
+  transform: translate3d(50px, 0px, 0px);
+}
+
+[wm-animation=bottom] {
+  transform: translate3d(0px, 50px, 0px);
+}
+
+[wm-animation].animating {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ==== Animatino icons ==== */
+@keyframes return {
+  from {
+    transform: translateY(4px);
+  }
+  to {
+    transform: translateY(-4px);
+  }
+}
+/*==== Colors ====*/
+/*==== Line Heights ====*/
+/*==== Texts ====*/
+/*==== Texts Mobile ====*/
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+:target {
+  scroll-margin-top: 4.8rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background: #06090f;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+main section {
+  padding: 5.6rem 0;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/*==== Header ====*/
+.header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  height: 12vh;
+  width: 100%;
+  border-bottom: 1px solid rgba(35, 51, 85, 0.5);
+  background-color: #06090f;
+}
+.header .nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 12.8rem;
+  height: 100%;
+}
+.header .nav .nav-list {
+  display: flex;
+  gap: 3.2rem;
+}
+.header .nav .nav-list li a {
+  color: #eaeaff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.header .nav i {
+  display: none;
+}
+.header .nav .nav-logo {
+  font-size: 2rem;
+  color: #eaeaff;
+  letter-spacing: 0.2rem;
+}
+
+/*==== Home Page ====*/
+.home {
+  max-width: 100%;
+  margin: 0;
+  height: 78vh;
+  background: linear-gradient(45deg, #06090f, rgb(15, 15, 41), #06090f);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home h1 {
+  font-size: 4.8rem;
+  color: #eaeaff;
+  font-weight: 700;
+  animation: topAnimation 1s ease-in-out;
+  padding: 0 12.8rem;
+}
+.home p {
+  max-width: 1024px;
+  margin-top: 1.6rem;
+  animation: leftAnimation 1s ease-in-out;
+  font-size: 2rem;
+  color: #acacac;
+  line-height: 140%;
+  padding: 0 12.8rem;
+}
+.home .home-button {
+  animation: bottomAnimation 1s ease-in-out;
+  margin-top: 2.4rem;
+}
+.home .home-button button {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: 16px;
+  border: none;
+  background: linear-gradient(223.75deg, #1c51ff 4.8%, #001068 95.02%);
+  color: #eaeaff;
+  padding: 12px 24px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.home .home-button button:hover {
+  background: linear-gradient(223.75deg, #0029af 4.8%, #000a42 95.02%);
+}
+
+/*==== Games Page ====*/
+.games h2 {
+  line-height: 130%;
+  font-size: 3.2rem;
+  color: #eaeaff;
+}
+.games p {
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  line-height: 140%;
+  color: #acacac;
+}
+.games .games-container {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.6rem;
+}
+.games .games-container .games-content {
+  border: 1px solid rgba(35, 51, 85, 0.5);
+  border-radius: 0.5rem;
+  position: relative;
+}
+.games .games-button button {
+  margin-top: 3.2rem;
+  font-size: 16px;
+  border: none;
+  background: linear-gradient(223.75deg, #1c51ff 4.8%, #001068 95.02%);
+  color: #eaeaff;
+  padding: 12px 24px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.games .games-button button:hover {
+  background: linear-gradient(223.75deg, #0029af 4.8%, #000a42 95.02%);
+}
 
 .news {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.news-container {
-	height: 100%;
-	width: 100%;
+.news h2 {
+  line-height: 130%;
+  font-size: 3.2rem;
+  color: #eaeaff;
 }
-.news-contents {
-	display: flex;
-	flex-direction: row;
-	gap: 1.6rem;
+.news .news-contents {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
 }
-.article {
-	position: relative;
-	height: 400px;
+.news .news-contents .news-container {
+  height: 100%;
+  width: 100%;
 }
-.article img {
-	padding: 0;
+.news .news-contents .news-container a .article {
+  position: relative;
+  height: 400px;
 }
-.article .gradient {
-	padding: 0;
+.news .news-contents .news-container a .article .gradient {
+  padding: 0;
 }
-.news-subtitle {
-	line-height: var(--subtitle-line-height);
-	margin-bottom: 4rem;
-	font-size: var(--subtitle-font-size);
-	color: var(--white-color);
+.news .news-contents .news-container a .article img {
+  padding: 0;
 }
-.news-info {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 25px;
+.news .news-contents .news-container a .article .news-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px;
 }
-.news-info span {
-	background: var(--button-color);
-	color: #fefbfb;
-	padding: 6px 16px;
-	border-radius: 4px;
-	line-height: var(--paragraph-line-height);
-	font-size: 1.2rem;
-	font-weight: 500;
+.news .news-contents .news-container a .article .news-info span {
+  background: linear-gradient(223.75deg, #1c51ff 4.8%, #001068 95.02%);
+  color: #fefbfb;
+  padding: 6px 16px;
+  border-radius: 4px;
+  line-height: 140%;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
-.news-info h2 {
-	font-size: var(--paragraph-font-size);
-	line-height: var(--subtitle-line-height);
-	color: #fefbfb;
-	margin-top: 1.5rem;
-	line-height: 140%;
-	font-weight: 400;
+.news .news-contents .news-container a .article .news-info h2 {
+  font-size: 18px;
+  line-height: 130%;
+  color: #fefbfb;
+  margin-top: 1.5rem;
+  line-height: 140%;
+  font-weight: 400;
 }
-
-/* ==== COUPONS CSS ==== */
-
-.coupons-subtitle {
-	line-height: var(--subtitle-line-height);
-	margin-bottom: 2rem;
-	font-size: var(--subtitle-font-size);
-	color: var(--white-color);
-}
-.coupons-content-01 p {
-	margin-top: 1.6rem;
-	font-size: var(--paragraph-font-size);
-	color: var(--gray-color);
-	line-height: var(--paragraph-line-height);
-}
-.coupons-content-01 p a {
-	color: var(--link-color);
-}
-.coupons-content-02 {
-	margin-top: 2.4rem;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 1rem;
-}
-.coupons-item {
-	cursor: pointer;
-	border-radius: 1rem;
-	font-size: var(--small-font-size);
-	display: flex;
-	gap: 0.8rem;
-	align-items: center;
-	color: var(--white-color);
-	padding: 8px 16px;
-	border: 1px solid var(--border-color);
-}
-.coupons-item a {
-	color: var(--gray-color);
-}
-.coupons-item:hover {
-	background: #0c121f;
+.news p {
+  font-size: 2rem;
+  line-height: 140%;
+  color: #acacac;
+  margin-top: 3.2rem;
 }
 
-/* ==== FOOTER CSS ==== */
+/*==== Coupons Page ====*/
+.coupons h2 {
+  line-height: 130%;
+  font-size: 3.2rem;
+  color: #eaeaff;
+}
+.coupons .coupons-content-01 p {
+  font-size: 2rem;
+  line-height: 140%;
+  color: #acacac;
+  margin-top: 1.6rem;
+}
+.coupons .coupons-content-01 p a {
+  color: #3737ff;
+}
+.coupons .coupons-content-02 {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.coupons .coupons-content-02 .coupons-item {
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-size: 18px;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: #eaeaff;
+  padding: 8px 16px;
+  border: 1px solid rgba(35, 51, 85, 0.5);
+}
+.coupons .coupons-content-02 .coupons-item a {
+  color: #acacac;
+}
+.coupons .coupons-content-02 .coupons-item:hover {
+  background: #0c121f;
+}
 
+/*==== Footer Page ====*/
 .footer {
-	width: 100%;
-	height: 100px;
-	background-color: var(--primary-alternative-color);
+  width: 100%;
+  background-color: #090d16;
 }
 .footer div {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 100px;
-	width: 100%;
-	max-width: 1024px;
-	margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin: 0 12.8rem;
 }
-.footer p {
-	line-height: var(--paragraph-line-height);
-	font-size: 1.6rem;
-	color: var(--gray-color);
-	text-align: center;
-	font-weight: 400;
+.footer div p {
+  line-height: 140%;
+  font-size: 1.6rem;
+  color: #acacac;
+  text-align: center;
+  font-weight: 400;
 }
-.footer p a {
-	color: var(--link-color);
+.footer div p a {
+  color: #3737ff;
 }
-.footer-list {
-	display: flex;
-	gap: 0.8rem;
+.footer div .footer-list {
+  display: flex;
+  gap: 1.6rem;
 }
-.footer-list li a {
-	color: var(--gray-color);
-	font-size: var(--paragraph-font-size);
+.footer div .footer-list li a {
+  color: #acacac;
+  font-size: 2rem;
+  background-color: #323285;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
 }
-
-/* ==== ANIMATION CSS ==== */
-
-/* ==== loading animation ==== */
-@keyframes topAnimation {
-	from {
-		opacity: 0;
-		transform: translateY(-200px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+.footer div .footer-list li a i {
+  font-size: 20px;
+  animation: return 1s ease-in infinite alternate;
 }
 
-@keyframes leftAnimation {
-	from {
-		opacity: 0;
-		transform: translateX(-200px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes rightAnimation {
-	from {
-		opacity: 0;
-		transform: translateX(200px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes bottomAnimation {
-	from {
-		opacity: 0;
-		transform: translateY(200px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-/* ==== scroll animation ==== */
-[wm-animation] {
-	opacity: 0;
-	transition: 1s ease-in-out;
-}
-[wm-animation="top"] {
-	transform: translate3d(0px, -50px, 0px);
-}
-[wm-animation="left"] {
-	transform: translate3d(-50px, 0px, 0px);
-}
-[wm-animation="right"] {
-	transform: translate3d(50px, 0px, 0px);
-}
-[wm-animation="bottom"] {
-	transform: translate3d(0px, 50px, 0px);
-}
-[wm-animation].animating {
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-}
-
-/* ==== MEDIA QUERIES CSS ==== */
-
-@media screen and (max-width: 768px) {
-	:root {
-		--title-font-size: 4.8rem;
-		--subtitle-font-size: 2.4rem;
-		--normal-font-size: 1.8rem;
-		--paragraph-font-size: 1.6rem;
-		--small-font-size: 0.8rem;
-	}
-	main section {
-		margin: 0 4rem;
-		padding: 6rem 0;
-	}
-	.header {
-		height: 12vh;
-		width: 100%;
-		padding: 0 2rem;
-		position: fixed;
-		z-index: 1000;
-		top: 0;
-		left: 0;
-		background: #06090f;
-		border-bottom: 1px solid var(--border-color);
-	}
-	.nav {
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 4rem;
-	}
-	.nav-logo {
-		font-size: var(--paragraph-font-size);
-		color: var(--white-color);
-		letter-spacing: 0.2rem;
-	}
-	nav > i {
-		font-size: 24px;
-		color: var(--white-color);
-	}
-	.nav-list {
-		padding: 4rem 0;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		position: absolute;
-		width: 100%;
-		top: 12vh;
-		right: 0;
-		background: #06090f;
-		z-index: 1000;
-		height: 0;
-		transition: 0.6s;
-		visibility: hidden;
-		overflow-y: hidden;
-	}
-	.nav.active .nav-list {
-		height: calc(100vh - 12vh);
-		visibility: visible;
-		overflow-y: auto;
-	}
-	.nav-list li {
-		padding: 2.4rem 0;
-	}
-	.nav-list li a {
-		font-size: var(--normal-font-size);
-		color: var(--white-color);
-		font-weight: 400;
-	}
-	.home {
-		padding-top: 12rem;
-		margin: 0 4rem;
-	}
-	.home-title {
-		padding: 0 16px;
-		font-size: 32px;
-	}
-	.home-subtitle {
-		padding: 0 16px;
-		font-size: 32px;
-	}
-	.news-contents {
-		display: flex;
-		flex-direction: column;
-		gap: 1.6rem;
-	}
-	.home-button {
-		max-width: 176px;
-	}
-
-	.home-button button {
-		font-size: 12px;
-	}
-	.news-subtitle {
-		font-size: var(--subtitle-font-size);
-	}
-	.games-container {
-		display: grid;
-		grid-template-columns: repeat(1, 6fr);
-		gap: 1.6rem;
-	}
-	.games-subtitle {
-		font-size: var(--subtitle-font-size);
-	}
-	.games-button button {
-		font-size: 12px;
-	}
-	.coupons-subtitle {
-		font-size: var(--subtitle-font-size);
-	}
-	.coupons-content-01 h3 {
-		font-size: var(--normal-font-size);
-	}
-	.coupons-content-01 p {
-		font-size: var(--paragraph-font-size);
-	}
-	.coupons-content-02 {
-		gap: 2rem;
-	}
-	.coupons-item {
-		font-size: var(--paragraph-font-size);
-	}
-	.footer div p {
-		text-align: start;
-		font-size: var(--small-font-size);
-		margin-right: 2.4rem;
-	}
-}
 @media screen and (max-width: 1024px) {
-	.nav {
-		max-width: 668px;
-	}
-	main section {
-		max-width: 668px;
-	}
-	.footer div {
-		max-width: 668px;
-	}
+  /*==== Core ====*/
+  main section {
+    margin: 0 8rem;
+    padding: 6rem 0;
+  }
+  /*==== Header Mobile ====*/
+  .header .nav i {
+    display: none;
+  }
+  .header .nav .nav-logo {
+    font-size: 2rem;
+    color: #eaeaff;
+    letter-spacing: 0.2rem;
+  }
+  /*==== Home Page Mobile ====*/
+  .home {
+    margin: 0;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    height: 88vh;
+  }
+  .home h1 {
+    padding: 0 16px;
+  }
+  .home p {
+    padding: 0;
+  }
+  .home .home-button button {
+    font-size: 16px;
+    border: none;
+    background: linear-gradient(223.75deg, #1c51ff 4.8%, #001068 95.02%);
+    color: #eaeaff;
+    padding: 12px 24px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+  .home .home-button button:hover {
+    background: linear-gradient(223.75deg, #0029af 4.8%, #000a42 95.02%);
+  }
+  /*==== Games Page Mobile ====*/
+  .games h2 {
+    font-size: 3.2rem;
+  }
+  .games p {
+    font-size: 2rem;
+  }
+  .games .games-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .games .games-container .games-content a {
+    display: block;
+    height: 100%;
+  }
+  .games .games-container .games-content a img {
+    aspect-ratio: 1/1;
+  }
+  .games .games-button {
+    margin-top: 3.2rem;
+  }
+  .games .games-button button {
+    font-size: 1.6rem;
+  }
+  /*==== News Page Mobile ====*/
+  .news h2 {
+    font-size: 3.2rem;
+  }
+  .news .news-contents {
+    flex-direction: column;
+  }
+  .news .news-contents .news-container a .article .news-info span {
+    font-size: 14px;
+  }
+  .news .news-contents .news-container a .article .news-info h2 {
+    font-size: 2rem;
+  }
+  .news p {
+    font-size: 2rem;
+  }
+  /*==== Coupons Page Mobile ====*/
+  .coupons h2 {
+    font-size: 3.2rem;
+  }
+  .coupons .coupons-content-01 p {
+    font-size: 2rem;
+  }
+  .coupons .coupons-content-02 a .coupons-item {
+    font-size: 1.6rem;
+  }
+  /*==== Footer Page Mobile ====*/
+  .footer div {
+    margin: 0 8rem;
+    gap: 2.4rem;
+    justify-content: space-between;
+  }
+  .footer div p {
+    text-align: start;
+    font-size: 14px;
+  }
 }
+@media screen and (max-width: 600px) {
+  /*==== Core ====*/
+  main section {
+    margin: 0 4rem;
+  }
+  /*==== Header Mobile ====*/
+  .header .nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    margin: 0;
+  }
+  .header .nav .nav-logo {
+    font-size: 1.6rem;
+    color: #eaeaff;
+  }
+  .header .nav i {
+    font-size: 24px;
+    color: #eaeaff;
+    display: block;
+  }
+  .header .nav .nav-list {
+    padding: 4rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    top: 12vh;
+    right: 0;
+    background: #06090f;
+    z-index: 1000;
+    height: 0;
+    transition: 0.6s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .header .nav.active .nav-list {
+    height: 88vh;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .header .nav.active .nav-list li {
+    padding: 2.4rem 0;
+  }
+  .header .nav.active .nav-list li a {
+    font-size: 1.6rem;
+    color: #eaeaff;
+    font-weight: 400;
+  }
+  /*==== Home Page Mobile ====*/
+  .home {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .home h1 {
+    font-size: 4rem;
+  }
+  .home p {
+    font-size: 1.6rem;
+  }
+  .home .home-button button {
+    font-size: 16px;
+    border: none;
+    background: linear-gradient(223.75deg, #1c51ff 4.8%, #001068 95.02%);
+    color: #eaeaff;
+    padding: 12px 24px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .home .home-button button:hover {
+    background: linear-gradient(223.75deg, #0029af 4.8%, #000a42 95.02%);
+  }
+  /*==== Games Page Mobile ====*/
+  .games h2 {
+    font-size: 2.4rem;
+  }
+  .games p {
+    font-size: 1.6rem;
+  }
+  .games .games-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .games .games-container .games-content a {
+    display: block;
+    height: 100%;
+  }
+  .games .games-container .games-content a img {
+    aspect-ratio: 1/1;
+  }
+  .games .games-button button {
+    font-size: 12px;
+  }
+  /*==== News Page Mobile ====*/
+  .news h2 {
+    font-size: 2.4rem;
+  }
+  .news p {
+    font-size: 1.6rem;
+  }
+  /*==== Coupons Page Mobile ====*/
+  .coupons h2 {
+    font-size: 2.4rem;
+  }
+  .coupons .coupons-content-01 p {
+    font-size: 1.6rem;
+  }
+  .coupons .coupons-content-02 a .coupons-item {
+    font-size: 12px;
+  }
+  /*==== Footer Page Mobile ====*/
+  .footer div {
+    margin: 0 4rem;
+  }
+  .footer div p {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
