@@ -1,0 +1,275 @@
+@media screen and (max-width: 1024px) {
+	/*==== Core ====*/
+	main section {
+		margin: 0 8rem;
+		padding: 6rem 0;
+	}
+	/*==== Header Mobile ====*/
+	.header {
+		.nav {
+			i {
+				display: none;
+			}
+			.nav-logo {
+				font-size: $paragraph-font-size;
+				color: $white-color;
+				letter-spacing: 0.2rem;
+			}
+		}
+	}
+
+	/*==== Home Page Mobile ====*/
+	.home {
+		margin: 0;
+		padding-left: 8rem;
+		padding-right: 8rem;
+		height: calc(100vh - 12vh);
+		h1 {
+			padding: 0 16px;
+		}
+		p {
+			padding: 0;
+		}
+		.home-button {
+			button {
+				@include button;
+			}
+		}
+	}
+
+	/*==== Games Page Mobile ====*/
+
+	.games {
+		h2 {
+			font-size: $subtitle-font-size;
+		}
+		p {
+			font-size: $paragraph-font-size;
+		}
+		.games-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			.games-content {
+				a {
+					display: block;
+					height: 100%;
+					img {
+						aspect-ratio: 1/1;
+					}
+				}
+			}
+		}
+		.games-button {
+			margin-top: 3.2rem;
+			button {
+				font-size: $paragraph-font-size-mobile;
+			}
+		}
+	}
+
+	/*==== News Page Mobile ====*/
+
+	.news {
+		h2 {
+			font-size: $subtitle-font-size;
+		}
+		.news-contents {
+			flex-direction: column;
+			.news-container {
+				a {
+					.article {
+						.news-info {
+							span {
+								font-size: 14px;
+							}
+							h2 {
+								font-size: $paragraph-font-size;
+							}
+						}
+					}
+				}
+			}
+		}
+		p {
+			font-size: $paragraph-font-size;
+		}
+	}
+
+	/*==== Coupons Page Mobile ====*/
+	.coupons {
+		h2 {
+			font-size: $subtitle-font-size;
+		}
+		.coupons-content-01 {
+			p {
+				font-size: $paragraph-font-size;
+			}
+		}
+		.coupons-content-02 {
+			a {
+				.coupons-item {
+					font-size: $paragraph-font-size-mobile;
+				}
+			}
+		}
+	}
+
+	/*==== Footer Page Mobile ====*/
+	.footer {
+		div {
+			margin: 0 8rem;
+			gap: 2.4rem;
+			justify-content: space-between;
+			p {
+				text-align: start;
+				font-size: 14px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	/*==== Core ====*/
+	main section {
+		margin: 0 4rem;
+	}
+	/*==== Header Mobile ====*/
+	.header {
+		.nav {
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 4rem;
+			margin: 0;
+			.nav-logo {
+				font-size: $paragraph-font-size-mobile;
+				color: $white-color;
+			}
+			i {
+				font-size: 24px;
+				color: $white-color;
+				display: block;
+			}
+			.nav-list {
+				padding: 4rem 0;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				position: absolute;
+				width: 100%;
+				top: 12vh;
+				right: 0;
+				background: #06090f;
+				z-index: 1000;
+				height: 0;
+				transition: 0.6s;
+				visibility: hidden;
+				overflow-y: hidden;
+			}
+			&.active {
+				.nav-list {
+					height: calc(100vh - 12vh);
+					visibility: visible;
+					overflow-y: auto;
+					li {
+						padding: 2.4rem 0;
+						a {
+							font-size: $paragraph-font-size-mobile;
+							color: $white-color;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*==== Home Page Mobile ====*/
+	.home {
+		padding-left: 4rem;
+		padding-right: 4rem;
+		h1 {
+			font-size: $title-font-size-mobile;
+		}
+		p {
+			font-size: $paragraph-font-size-mobile;
+		}
+		.home-button {
+			button {
+				@include button;
+				font-size: 12px;
+			}
+		}
+	}
+
+	/*==== Games Page Mobile ====*/
+
+	.games {
+		h2 {
+			font-size: $subtitle-font-size-mobile;
+		}
+		p {
+			font-size: $paragraph-font-size-mobile;
+		}
+		.games-container {
+			display: flex;
+			flex-direction: column;
+			.games-content {
+				a {
+					display: block;
+					height: 100%;
+					img {
+						aspect-ratio: 1/1;
+					}
+				}
+			}
+		}
+		.games-button {
+			button {
+				font-size: 12px;
+			}
+		}
+	}
+
+	/*==== News Page Mobile ====*/
+
+	.news {
+		h2 {
+			font-size: $subtitle-font-size-mobile;
+		}
+		p {
+			font-size: $paragraph-font-size-mobile;
+		}
+	}
+
+	/*==== Coupons Page Mobile ====*/
+	.coupons {
+		h2 {
+			font-size: $subtitle-font-size-mobile;
+		}
+		.coupons-content-01 {
+			p {
+				font-size: $paragraph-font-size-mobile;
+			}
+		}
+		.coupons-content-02 {
+			a {
+				.coupons-item {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	/*==== Footer Page Mobile ====*/
+	.footer {
+		div {
+			margin: 0 4rem;
+			p {
+				font-size: 12px;
+			}
+		}
+	}
+}
