@@ -177,7 +177,7 @@ main section {
 /*==== Home Page ====*/
 .home {
   max-width: 100%;
-  margin: 0;
+  margin-top: 12vh;
   height: 78vh;
   background: linear-gradient(45deg, #06090f, rgb(15, 15, 41), #06090f);
   text-align: center;
@@ -413,7 +413,8 @@ main section {
   }
   /*==== Home Page Mobile ====*/
   .home {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 8rem;
     padding-right: 8rem;
     height: 88vh;
