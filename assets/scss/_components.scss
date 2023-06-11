@@ -1,0 +1,131 @@
+.gradient {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		rgba(6, 9, 15, 0.4) 60%,
+		#06090f 100%
+	);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	&:hover {
+		background: linear-gradient(
+			rgba(6, 9, 15, 0.582) 60%,
+			#06090f 100%
+		);
+	}
+}
+
+/* ==== Mixins Texts ==== */
+@mixin title {
+	font-size: $title-font-size;
+	color: $white-color;
+	font-weight: 700;
+}
+
+@mixin subtitle() {
+	line-height: $subtitle-line-height;
+	font-size: $subtitle-font-size;
+	color: $white-color;
+}
+
+@mixin paragraph() {
+	font-size: $paragraph-font-size;
+	line-height: $paragraph-line-height;
+	color: $gray-color;
+}
+
+/* ==== Mixins Texts ==== */
+@mixin button {
+	font-size: 16px;
+	border: none;
+	background: $button-color;
+	color: $white-color;
+	padding: 12px 24px;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	&:hover {
+		background: linear-gradient(
+			223.75deg,
+			#0029af 4.8%,
+			#000a42 95.02%
+		);
+	}
+}
+
+/* ==== Loading Animation CSS ==== */
+@keyframes topAnimation {
+	from {
+		opacity: 0;
+		transform: translateY(-200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes leftAnimation {
+	from {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes rightAnimation {
+	from {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes bottomAnimation {
+	from {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ==== Scroll Animation JS ==== */
+[wm-animation] {
+	opacity: 0;
+	transition: 1s ease-in-out;
+}
+[wm-animation="top"] {
+	transform: translate3d(0px, -50px, 0px);
+}
+[wm-animation="left"] {
+	transform: translate3d(-50px, 0px, 0px);
+}
+[wm-animation="right"] {
+	transform: translate3d(50px, 0px, 0px);
+}
+[wm-animation="bottom"] {
+	transform: translate3d(0px, 50px, 0px);
+}
+[wm-animation].animating {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+/* ==== Animatino icons ==== */
+@keyframes return {
+	from {
+		transform: translateY(4px);
+	}
+	to {
+		transform: translateY(-4px);
+	}
+}
