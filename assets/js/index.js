@@ -24,8 +24,6 @@ function animeScroll() {
 	allElements.forEach((e) => {
 		if (windowTop > e.offsetTop) {
 			e.classList.add("animating");
-		} else {
-			e.classList.remove("animating");
 		}
 	});
 }
