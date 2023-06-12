@@ -129,7 +129,7 @@
 		}
 	}
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 792px) {
 	/*==== Core ====*/
 	main section {
 		margin: 0 4rem;
@@ -270,6 +270,31 @@
 			margin: 0 4rem;
 			p {
 				font-size: 12px;
+			}
+		}
+	}
+	/*==== Login Page Mobile ====*/
+
+	.login {
+		justify-content: center;
+		img {
+			display: none;
+			// width: 100%;
+			// aspect-ratio: 8/4;
+		}
+		.login-contents {
+			max-width: 400px;
+			margin: 0 auto;
+			margin: 6.4rem;
+			h2 {
+				margin-top: 1.6rem;
+				font-size: $subtitle-font-size;
+			}
+			p {
+				font-size: $paragraph-font-size-mobile;
+			}
+			form {
+				margin-top: 0;
 			}
 		}
 	}
