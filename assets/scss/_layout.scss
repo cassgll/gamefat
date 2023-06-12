@@ -17,6 +17,7 @@
 
 		.nav-list {
 			display: flex;
+			align-items: center;
 			gap: 3.2rem;
 			li {
 				a {
@@ -24,6 +25,9 @@
 					font-size: 18px;
 					font-weight: 400;
 				}
+			}
+			.nav-login button {
+				@include button;
 			}
 		}
 		i {
@@ -55,20 +59,20 @@
 	align-items: center;
 	h1 {
 		@include title;
-		animation: topAnimation 1s ease-in-out;
+		animation: topAnimation 0.8s ease-in-out;
 		padding: 0 12.8rem;
 	}
 	p {
 		max-width: 1024px;
 		margin-top: 1.6rem;
-		animation: leftAnimation 1s ease-in-out;
+		animation: leftAnimation 0.8s ease-in-out;
 		font-size: $paragraph-font-size;
 		color: $gray-color;
 		line-height: $paragraph-line-height;
 		padding: 0 12.8rem;
 	}
 	.home-button {
-		animation: bottomAnimation 1s ease-in-out;
+		animation: bottomAnimation 0.8s ease-in-out;
 		margin-top: 2.4rem;
 
 		button {
@@ -238,8 +242,89 @@
 					border-radius: 0.4rem;
 					i {
 						font-size: 20px;
-						animation: return 1s ease-in infinite alternate;
+						animation: return 0.8s ease-in infinite
+							alternate;
 					}
+				}
+			}
+		}
+	}
+}
+
+/*==== Login Page ====*/
+.login {
+	display: flex;
+	height: 100vh;
+	flex-direction: row-reverse;
+	align-items: center;
+	img {
+		animation: leftAnimation 0.8s ease-in-out;
+		width: 55vw;
+		padding: 0;
+		border-radius: 0;
+	}
+	.login-contents {
+		animation: rightAnimation 0.8s ease-in-out;
+		margin: 0 12.8rem;
+		display: flex;
+		flex-direction: column;
+		h2 {
+			@include subtitle;
+		}
+		p {
+			margin-top: 0.8rem;
+			@include paragraph;
+			font-size: 16px;
+		}
+		form {
+			margin-top: 4.6rem;
+			display: flex;
+			flex-direction: column;
+
+			.login-items {
+				border: none;
+				div {
+					display: flex;
+					flex-direction: column;
+					label {
+						margin-top: 1.6rem;
+						@include paragraph;
+						color: $white-color;
+						font-size: 18px;
+					}
+					input {
+						margin-top: 0.8rem;
+						font-size: 14px;
+						border: none;
+						border-radius: 0.4rem;
+						padding: 1.6rem;
+						background-color: $primary-alternative-color;
+						color: $white-color;
+						&:focus {
+							outline-color: $second-color;
+							outline-style: double;
+							outline-offset: 4px;
+						}
+					}
+				}
+			}
+			a:nth-child(2) {
+				margin-top: 3.2rem;
+				button {
+					@include button;
+					background-color: $second-color;
+					width: 100%;
+					&:hover {
+						background-color: $second-alternative-color;
+					}
+				}
+			}
+			a:nth-child(3) {
+				margin-top: 1.6rem;
+				font-size: 12px;
+				color: white;
+				&:hover {
+					color: #1c51ff;
 				}
 			}
 		}
