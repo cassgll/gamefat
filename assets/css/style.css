@@ -56,7 +56,7 @@
 /* ==== Scroll Animation JS ==== */
 [wm-animation] {
   opacity: 0;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 [wm-animation=top] {
@@ -158,12 +158,25 @@ main section {
 }
 .header .nav .nav-list {
   display: flex;
+  align-items: center;
   gap: 3.2rem;
 }
 .header .nav .nav-list li a {
   color: #eaeaff;
   font-size: 18px;
   font-weight: 400;
+}
+.header .nav .nav-list .nav-login button {
+  font-size: 16px;
+  border: none;
+  background: linear-gradient(223.75deg, #1c51ff 4.8%, #001068 95.02%);
+  color: #eaeaff;
+  padding: 12px 24px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.header .nav .nav-list .nav-login button:hover {
+  background: linear-gradient(223.75deg, #0029af 4.8%, #000a42 95.02%);
 }
 .header .nav i {
   display: none;
@@ -190,20 +203,20 @@ main section {
   font-size: 4.8rem;
   color: #eaeaff;
   font-weight: 700;
-  animation: topAnimation 1s ease-in-out;
+  animation: topAnimation 0.8s ease-in-out;
   padding: 0 12.8rem;
 }
 .home p {
   max-width: 1024px;
   margin-top: 1.6rem;
-  animation: leftAnimation 1s ease-in-out;
+  animation: leftAnimation 0.8s ease-in-out;
   font-size: 2rem;
   color: #acacac;
   line-height: 140%;
   padding: 0 12.8rem;
 }
 .home .home-button {
-  animation: bottomAnimation 1s ease-in-out;
+  animation: bottomAnimation 0.8s ease-in-out;
   margin-top: 2.4rem;
 }
 .home .home-button button {
@@ -393,7 +406,101 @@ main section {
 }
 .footer div .footer-list li a i {
   font-size: 20px;
-  animation: return 1s ease-in infinite alternate;
+  animation: return 0.8s ease-in infinite alternate;
+}
+
+/*==== Login Page ====*/
+.login {
+  display: flex;
+  height: 100vh;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.login img {
+  animation: leftAnimation 0.8s ease-in-out;
+  width: 55vw;
+  padding: 0;
+  border-radius: 0;
+}
+.login .login-contents {
+  animation: rightAnimation 0.8s ease-in-out;
+  margin: 0 12.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.login .login-contents h2 {
+  line-height: 130%;
+  font-size: 3.2rem;
+  color: #eaeaff;
+}
+.login .login-contents p {
+  margin-top: 0.8rem;
+  font-size: 2rem;
+  line-height: 140%;
+  color: #acacac;
+  font-size: 16px;
+}
+.login .login-contents form {
+  margin-top: 4.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.login .login-contents form .login-items {
+  border: none;
+}
+.login .login-contents form .login-items div {
+  display: flex;
+  flex-direction: column;
+}
+.login .login-contents form .login-items div label {
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  line-height: 140%;
+  color: #acacac;
+  color: #eaeaff;
+  font-size: 18px;
+}
+.login .login-contents form .login-items div input {
+  margin-top: 0.8rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1.6rem;
+  background-color: #090d16;
+  color: #eaeaff;
+}
+.login .login-contents form .login-items div input:focus {
+  outline-color: #323285;
+  outline-style: double;
+  outline-offset: 4px;
+}
+.login .login-contents form a:nth-child(2) {
+  margin-top: 3.2rem;
+}
+.login .login-contents form a:nth-child(2) button {
+  font-size: 16px;
+  border: none;
+  background: linear-gradient(223.75deg, #1c51ff 4.8%, #001068 95.02%);
+  color: #eaeaff;
+  padding: 12px 24px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: #323285;
+  width: 100%;
+}
+.login .login-contents form a:nth-child(2) button:hover {
+  background: linear-gradient(223.75deg, #0029af 4.8%, #000a42 95.02%);
+}
+.login .login-contents form a:nth-child(2) button:hover {
+  background-color: #23235c;
+}
+.login .login-contents form a:nth-child(3) {
+  margin-top: 1.6rem;
+  font-size: 12px;
+  color: white;
+}
+.login .login-contents form a:nth-child(3):hover {
+  color: #1c51ff;
 }
 
 @media screen and (max-width: 1024px) {
@@ -499,7 +606,7 @@ main section {
     font-size: 14px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 792px) {
   /*==== Core ====*/
   main section {
     margin: 0 4rem;
@@ -620,6 +727,28 @@ main section {
   }
   .footer div p {
     font-size: 12px;
+  }
+  /*==== Login Page Mobile ====*/
+  .login {
+    justify-content: center;
+  }
+  .login img {
+    display: none;
+  }
+  .login .login-contents {
+    max-width: 400px;
+    margin: 0 auto;
+    margin: 6.4rem;
+  }
+  .login .login-contents h2 {
+    margin-top: 1.6rem;
+    font-size: 3.2rem;
+  }
+  .login .login-contents p {
+    font-size: 1.6rem;
+  }
+  .login .login-contents form {
+    margin-top: 0;
   }
 }
 
