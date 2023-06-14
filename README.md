@@ -14,11 +14,11 @@ Pretendo atualizá-lo em breve com:
 
 Para visualizar o projeto [Clique aqui](https://gamefat.netlify.app/)
 
-###### Últimas Atualizações
+#### Últimas Atualizações
 
 - Criação da tela de login
 - Animações em CSS e Scroll com Javascript
 - Trabalhando com Imagens
-- Forulários
-- Novas Cores
+- Formulários
+- Atualização de Cores
 - Backgrounds
