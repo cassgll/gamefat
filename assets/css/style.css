@@ -96,7 +96,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 :target {
@@ -107,7 +106,7 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 body {
@@ -140,7 +139,7 @@ main section {
 
 /*==== Header ====*/
 .header {
-  position: fixed;
+  position: sticky;
   z-index: 1000;
   top: 0;
   height: 12vh;
@@ -190,8 +189,7 @@ main section {
 /*==== Home Page ====*/
 .home {
   max-width: 100%;
-  margin-top: 12vh;
-  height: 78vh;
+  height: 82vh;
   background: linear-gradient(45deg, #06090f, rgb(15, 15, 41), #06090f);
   text-align: center;
   display: flex;
