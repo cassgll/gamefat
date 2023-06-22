@@ -23,7 +23,7 @@ $button-color: linear-gradient(
 );
 
 /*==== Texts ====*/
-$font-family: "Ubuntu", sans-serif;
+$font-family: "Archivo", sans-serif;
 
 $title-font-size: 4.8rem;
 $subtitle-font-size: 3.2rem;
@@ -37,7 +37,6 @@ $paragraph-font-size-mobile: 1.6rem;
 html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
-	overflow-x: hidden;
 }
 
 :target {
@@ -58,7 +57,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: var(--white-color);
+	color: $white-color;
 }
 
 li {
