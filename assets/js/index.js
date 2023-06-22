@@ -20,7 +20,7 @@ const allElements = document.querySelectorAll(
 
 function animeScroll() {
 	const windowTop =
-		window.pageYOffset + window.innerHeight * 0.85;
+		window.scrollY + window.innerHeight * 0.85;
 	allElements.forEach((e) => {
 		if (windowTop > e.offsetTop) {
 			e.classList.add("animating");
