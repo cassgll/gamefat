@@ -1,7 +1,7 @@
 /*==== Header ====*/
 .header {
-	position: fixed;
-	z-index: 1000;
+	position: sticky;
+	z-index: 1;
 	top: 0;
 	height: 12vh;
 	width: 100%;
@@ -28,6 +28,13 @@
 			}
 			.nav-login button {
 				@include button;
+				&:hover {
+					background: linear-gradient(
+						223.75deg,
+						#0029af 4.8%,
+						#000a42 95.02%
+					);
+				}
 			}
 		}
 		i {
@@ -44,8 +51,7 @@
 /*==== Home Page ====*/
 .home {
 	max-width: 100%;
-	margin-top: 12vh;
-	height: calc(90vh - 12vh);
+	height: calc(90vh - 8vh);
 	background: linear-gradient(
 		45deg,
 		$primary-color,
@@ -80,6 +86,13 @@
 			gap: 0.8rem;
 			align-items: center;
 			@include button;
+			&:hover {
+				background: linear-gradient(
+					223.75deg,
+					#0029af 4.8%,
+					#000a42 95.02%
+				);
+			}
 		}
 	}
 }
@@ -109,6 +122,13 @@
 		button {
 			margin-top: 3.2rem;
 			@include button;
+			&:hover {
+				background: linear-gradient(
+					223.75deg,
+					#0029af 4.8%,
+					#000a42 95.02%
+				);
+			}
 		}
 	}
 }
@@ -172,6 +192,7 @@
 
 /*==== Coupons Page ====*/
 .coupons {
+	margin-bottom: 5.6rem;
 	h2 {
 		@include subtitle;
 	}
@@ -235,9 +256,11 @@
 			gap: 1.6rem;
 			li {
 				a {
+					@include button;
+
 					color: $gray-color;
 					font-size: $paragraph-font-size;
-					background-color: $second-color;
+
 					padding: 0.8rem;
 					border-radius: 0.4rem;
 					i {
@@ -312,6 +335,13 @@
 				margin-top: 3.2rem;
 				button {
 					@include button;
+					&:hover {
+						background: linear-gradient(
+							223.75deg,
+							#0029af 4.8%,
+							#000a42 95.02%
+						);
+					}
 					background-color: $second-color;
 					width: 100%;
 					&:hover {
