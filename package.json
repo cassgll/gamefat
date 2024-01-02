@@ -1,0 +1,22 @@
+{
+  "name": "gamefat",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/HTML-%20-green) ![](https://img.shields.io/badge/CSS-%20-yellowgreen) ![](https://img.shields.io/badge/JavaScript-%20-blue)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cassgll/gamefat.git"
+  },
+  "author": "Cassio Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cassgll/gamefat/issues"
+  },
+  "homepage": "https://github.com/cassgll/gamefat#readme",
+  "dependencies": {
+    "sass": "^1.69.7"
+  }
+}

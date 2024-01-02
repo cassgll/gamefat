@@ -35,6 +35,10 @@
 		/>
 		<!-- ===== CSS ===== -->
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/aos@next/dist/aos.css"
+		/>
 		<title>Gamefat</title>
 	</head>
 	<body>
@@ -44,24 +48,16 @@
 				<i class="bx bx-menu-alt-right" id="button"></i>
 				<ul class="nav-list">
 					<li>
-						<a href="./index.html" class="nav-link"
-							>Início</a
-						>
+						<a href="#" class="nav-link">Início</a>
 					</li>
 					<li>
-						<a href="./index.html#games" class="nav-link"
-							>Jogos</a
-						>
+						<a href="#" class="nav-link">Jogos</a>
 					</li>
 					<li>
-						<a href="./index.html#news" class="nav-link"
-							>Notícias</a
-						>
+						<a href="#" class="nav-link">Notícias</a>
 					</li>
 					<li>
-						<a href="./index.html#coupons" class="nav-link"
-							>Cupons</a
-						>
+						<a href="#" class="nav-link">Cupons</a>
 					</li>
 
 					<a href="pages/login.html" class="nav-login">
@@ -88,7 +84,17 @@
 				></a>
 			</section>
 
-			<section class="games" id="games" wm-animation="left">
+			<section
+				class="games"
+				id="games"
+				data-aos="fade-up"
+				data-aos-offset="200"
+				data-aos-delay="40"
+				data-aos-duration="900"
+				data-aos-easing="ease-in-out"
+				data-aos-once="false"
+				data-aos-anchor-placement="top"
+			>
 				<h2>Principais jogos da plataforma</h2>
 				<p>
 					A nossa plataforma garante a qualidade dos jogos
@@ -161,7 +167,17 @@
 				</div>
 			</section>
 
-			<section class="news" id="news" wm-animation="left">
+			<section
+				class="news"
+				id="news"
+				data-aos="fade-up"
+				data-aos-offset="200"
+				data-aos-delay="40"
+				data-aos-duration="900"
+				data-aos-easing="ease-in-out"
+				data-aos-once="false"
+				data-aos-anchor-placement="top"
+			>
 				<h2>Notícias dos melhores games</h2>
 				<div class="news-contents">
 					<div class="news-container">
@@ -260,7 +276,13 @@
 			<section
 				class="coupons"
 				id="coupons"
-				wm-animation="left"
+				data-aos="fade-up"
+				data-aos-offset="200"
+				data-aos-delay="40"
+				data-aos-duration="900"
+				data-aos-easing="ease-in-out"
+				data-aos-once="false"
+				data-aos-anchor-placement="top"
 			>
 				<h2>Como funciona os cupons da plataforma?</h2>
 				<div class="coupons-content-01">
@@ -352,6 +374,7 @@
 				</ul>
 			</div>
 		</footer>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="assets/js/index.js"></script>
 	</body>
 </html>
